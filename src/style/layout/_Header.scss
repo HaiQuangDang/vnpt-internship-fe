@@ -1,0 +1,185 @@
+.header {
+    position: sticky;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 70px;
+    background-color: $bg-light-gray;
+    border-bottom: 3px solid $gray1;
+    transition: all 0.15s linear;
+
+    .header-container {
+        @include horizonCenter();
+        height: 100%;
+    }
+
+    .header-brand {
+        img {
+            height: 40px;
+        }
+
+        margin-right: auto;
+    }
+
+    .header-user {
+        height: 100%;
+        @include horizonCenter();
+        cursor: pointer;
+        position: relative;
+
+        .avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin-right: 10px;
+            transition: box-shadow 0.15s linear;
+        }
+
+        .info {
+            .name {
+                font-weight: 600;
+                color: $blue0;
+            }
+
+            .job {
+                font-size: 1.2rem;
+                font-weight: 500;
+                color: $blackText;
+            }
+        }
+
+        .expand {
+            position: absolute;
+            display: none;
+            top: 60px;
+            left: 60px;
+            background-color: $bg-light-gray1;
+            box-shadow: 0 3px 6px $shadow-gray;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            overflow: hidden;
+
+            ul {
+                list-style-type: none;
+                width: 200px;
+                padding: 0;
+                margin: 0;
+
+                li {
+                    font-size: 1.4rem;
+                    width: 100%;
+
+                    button,
+                    a {
+                        padding: 10px;
+                        width: 100%;
+                        cursor: pointer;
+                        text-align: left;
+                        background-color: transparent;
+                        border: none;
+                        text-decoration: none;
+                        color: black;
+                        display: block;
+
+                        &:hover {
+                            background-color: $shadow-gray;
+                        }
+                    }
+                }
+            }
+        }
+
+        &:hover {
+            .avatar {
+                box-shadow: 0 0 4px 3px $orange;
+            }
+
+            .expand {
+                display: block;
+            }
+
+        }
+    }
+}
+
+.header.active {
+    box-shadow: 0 8px 6px 0px rgba(0, 0, 0, .05);
+    background-color: #fff;
+}
+
+
+
+
+//*************RESPONSIVE***********//  
+@media (max-width: 767.98px) {
+    .header {
+        border-bottom: 2px solid $gray1;
+        .header-brand {
+            img {
+                height: 36px;
+            }
+        }
+        .header-user {
+            .avatar {
+                width: 36px;
+                height: 36px;
+                margin-right: 8px;
+            }
+            .expand {
+                left: 36px;
+                ul {
+                    width: 180px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 575.98px) { 
+    .header {
+        height: 50px;
+        border-bottom: 1px solid $gray1;
+        padding: 8px;
+        .header-brand {
+            img {
+                height: 32px;
+            }
+        }
+        .header-user {
+            .avatar {
+                width: 32px;
+                height: 32px;
+                margin-right: 6px;
+            }
+            .info {
+                .name {
+                    font-weight: 500;
+                    font-size: 1.2rem;
+                    line-height: 1.4rem;
+                }
+                .job {
+                    font-size: 1rem;
+                    font-weight: 400;
+                    line-height: 1.4rem;
+                }
+            }
+            .expand {
+                top: 40px;
+                left: 0px;
+                ul {
+                    width: 150px;
+                    li {
+                        font-size: 1.2rem;
+                        button,
+                        a {
+                            padding: 6px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

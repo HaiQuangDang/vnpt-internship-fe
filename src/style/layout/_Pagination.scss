@@ -1,0 +1,47 @@
+.pagination {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.pagination button {
+    width: 30px;
+    height: 30px;
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 1.4rem;
+    margin: 0 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    background: transparent;
+    color: $blackTextLink;
+    border-color: #eee;
+}
+
+.pagination button.active {
+    font-weight: 900;
+    border-color: #101010;
+    background: $blueHover;
+    color: #101010;
+}
+
+//*************RESPONSIVE**************//
+@media (max-width: 767.98px) {
+    .pagination button {
+        width: 24x;
+        height: 24px;
+        font-size: 1.2rem;
+        margin: 0 8px;
+        border-radius: 4px;
+    }
+
+}
+
+@media (max-width: 575.98px) {
+    .pagination button {
+        width: 20x;
+        height: 20px;
+        font-size: 1rem;
+    }
+}

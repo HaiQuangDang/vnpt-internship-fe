@@ -1,0 +1,16 @@
+// mixin
+@mixin horizonCenter() {
+    display: flex;
+    align-items: center;
+}
+@mixin verticalCenter() {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin statusColor($color) {
+    background-color: $color;
+}
+

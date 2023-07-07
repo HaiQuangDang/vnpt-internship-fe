@@ -1,0 +1,23 @@
+@import './abstracts/variables';
+@import './abstracts/reset';
+@import './abstracts/common';
+
+
+@import './components/buttons';
+@import './components/input';
+
+@import './layout/Footer';
+@import './layout/Header';
+@import './layout/Banner';
+@import './layout/Pagination';
+
+
+@import './pages/Detail';
+@import './pages/Login';
+@import './pages/Dashboard';
+@import './pages/Insert';
+
+.Toastify__toast-container div{
+    font-size: 1.4rem;
+}
+
